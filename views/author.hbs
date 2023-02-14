@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{author_name}} - Yoga Blog</title>
+    <meta http-equiv="content-type" content="text/html;  charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/style/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.png">
+</head>
+<body>
+<header>
+    <h1>{{authorName}}</h1>
+</header>
+<main>
+    <div class="article-list">
+        {{#articles}}
+            <article>
+                <a href="/article/{{slug}}"><img src="/images/{{image}}" alt=""></a>
+                <h2><a href="/article/{{slug}}">{{name}}</a></h2>
+            </article>
+        {{/articles}}
+    </div>
+</main>
+</body>
+</html>
