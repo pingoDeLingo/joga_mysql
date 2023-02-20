@@ -31,6 +31,10 @@ con.connect((err) => {
     console.log('Connected to joga_mysql database successfully!')
 })
 
+const articleRoutes = require('./routes/article')
+app.use('/', articleRoutes);
+app.use('article', articleRoutes);
+
 app.get('/', (req,res) =>{
     let query = 'SELECT * FROM article';
     let articles = []
